@@ -25,11 +25,11 @@ resource "aws_iam_role_policy_attachment" "lambda_logging" {
 # --- Lambda Function ---
 resource "aws_lambda_function" "my_lambda" {
   function_name = "my_lambda"
-  filename      = "lambda_impl/retrieve-url-lambda.zip"  # path to your zip
-  handler       = "retrieve-url-lambda.lambda_handler"       # filename.function_name
+  filename      = "lambda_impl/retrieve-url-lambda.zip" # path to your zip
+  handler       = "retrieve-url-lambda.lambda_handler"  # filename.function_name
   runtime       = "python3.11"
 
-  role          = aws_iam_role.lambda_exec.arn
+  role = aws_iam_role.lambda_exec.arn
 
   # optional: environment variables
   environment {
