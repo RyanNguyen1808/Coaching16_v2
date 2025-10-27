@@ -13,7 +13,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "sctp-ce12-tfstate"
+    bucket = "sctp-ce11-tfstate"
     key    = "groupxyz-coaching16-tfstate.tfstate"
     region = "us-east-1"
   }
